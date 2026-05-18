@@ -1,0 +1,1 @@
+First I’ll count occurrences using a hashmap. Then I’ll retrieve the k elements with highest frequencies.
