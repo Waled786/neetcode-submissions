@@ -1,0 +1,47 @@
+class Solution {
+public:
+
+    string encode(vector<string>& strs) {
+
+        string result;
+
+        for(string str : strs) {
+            result += to_string(str.size()) + "#" + str;
+        }
+
+        return result;
+    }
+
+    vector<string> decode(string s) {
+
+        vector<string> result;
+
+        int i = 0;
+
+        while(i < s.size()) {
+
+            int j = i;
+
+            while(s[j] != '#') {
+                j++;
+            }
+
+            int length = stoi(s.substr(i, j - i));
+
+            string word = s.substr(j + 1, length);
+
+            result.push_back(word);
+
+            i = j + 1 + length;
+        }
+
+        return result;
+    }
+};
+
+
+
+
+
+
+#I encode each string by prefixing its length followed by a delimiter. During decoding, I first read the length, then extract exactly that many characters to reconstruct the original string. This avoids ambiguity even if strings contain special characters
