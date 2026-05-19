@@ -1,0 +1,1 @@
+I traverse every cell once. For each number, I track whether it has already appeared in the current row, column, or 3×3 box using a hash set. If any duplicate is found, the board is invalid. Otherwise, the board is valid after the full traversal.
