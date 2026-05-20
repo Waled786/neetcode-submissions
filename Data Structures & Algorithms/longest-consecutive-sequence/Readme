@@ -1,0 +1,1 @@
+I use a hash set for constant-time lookups. I only begin expanding a sequence if the current number is the start of a sequence, meaning its previous number does not exist. Then I count forward until the sequence ends, keeping track of the maximum streak length.
