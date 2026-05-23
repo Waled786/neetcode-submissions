@@ -1,0 +1,1 @@
+I use two pointers from both ends. Non-alphanumeric characters are skipped, and characters are compared case-insensitively while moving inward.
