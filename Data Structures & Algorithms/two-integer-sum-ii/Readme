@@ -1,0 +1,1 @@
+Since the array is already sorted, I can use two pointers instead of a hashmap. If the current sum is too small, I move the left pointer right to increase the sum. If the sum is too large, I move the right pointer left to decrease it. This achieves O(n) time and O(1) extra space.”
